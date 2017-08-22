@@ -44,31 +44,65 @@ VAR CH20TXT = "A wealthy noble from the Noordvlakten province has challenged a p
 -> Welcome
 
 === Welcome ===
-+ PRESS START
-+ CONTINUE -> TOC
++ [PRESS START] -> PRO
++ [CONTINUE] -> TOC
 
 === TOC ===
 + [PROLOGUE: {PROT}] -> PRO
++ [PART 1] -> PART1
++ [PART 2] -> PART2
++ [PART 3] -> PART3
++ [PART 4] -> PART4
++ [PART 5] -> PART5
++ [FINAL] -> FINAL
+
+= PART1
 + [CHAPTER 1: {CH1T}] -> CH1
 + [CHAPTER 2: {CH2T}] -> CH2
 + [CHAPTER 3: {CH3T}] -> CH3
++ [Table of Contents] -> TOC
+-> DONE
+
+= PART2
 + [CHAPTER 4: {CH4T}] -> CH4
 + [CHAPTER 5: {CH5T}] -> CH5
 + [CHAPTER 6: {CH6T}] -> CH6
 + [CHAPTER 7: {CH7T}] -> CH7
+
++ [Table of Contents] -> TOC
+-> DONE
+
+= PART3
 + [CHAPTER 8: {CH8T}] -> CH8
 + [CHAPTER 9: {CH9T}] -> CH9
 + [CHAPTER 10: {CH10T}] -> CH10
 + [CHAPTER 11: {CH11T}] -> CH11
+
++ [Table of Contents] -> TOC
+-> DONE
+
+= PART4
+
 + [CHAPTER 12: {CH12T}] -> CH12
 + [CHAPTER 13: {CH13T}] -> CH13
 + [CHAPTER 14: {CH14T}] -> CH14
 + [CHAPTER 15: {CH15T}] -> CH15
+
++ [Table of Contents] -> TOC
+-> DONE
+
+= PART5
 + [CHAPTER 16: {CH16T}] -> CH16
 + [CHAPTER 17: {CH17T}] -> CH17
 + [CHAPTER 18: {CH18T}] -> CH18
 + [CHAPTER 19: {CH19T}] -> CH19
+
++ [Table of Contents] -> TOC
+= FINAL
 + [CHAPTER 20: {CH20T}] -> CH20
+
++ [Table of Contents] -> TOC
+-> DONE
 
 // STORY SHELL
 === PRO ===
