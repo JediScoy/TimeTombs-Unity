@@ -44,6 +44,7 @@ VAR CH20TXT = "A wealthy noble from the Noordvlakten province has challenged a p
 -> Welcome
 
 === Welcome ===
+TIME TOMBS
 + [PRESS START] -> PRO
 + [CONTINUE] -> TOC
 
@@ -211,6 +212,10 @@ VAR CH20TXT = "A wealthy noble from the Noordvlakten province has challenged a p
 + [Table of Contents] -> TOC
 -> DONE
 
+// Message for any section that is not ready to be viewed yet
+=== NotReady ===
+Thanks for your curious exploration, but this section can't be viewed yet
++ [Table of Contents] -> TOC
 
 // STORY DIALOGUE
 == TravelType ==
