@@ -215,8 +215,8 @@ VAR CH20TXT = "A wealthy noble from the Noordvlakten province has challenged a p
 // STORY DIALOGUE
 == TravelType ==
 Choose a traveling vessel
-+ Baloon
-+ Schooner
++ Balloon -> Balloon
++ Schooner -> Schooner
 
 == Balloon ===
 -> DONE
