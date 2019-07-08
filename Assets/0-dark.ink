@@ -1,11 +1,11 @@
-# title: In the Dark of Time
+# title: The Darkness of Time
 # author: Master Scoy
 
 // Story Outline
-CONST SeasonTitle = "Origins Epilogue"
-CONST PrologueTitle = "IN THE DARK OF TIME"
-CONST EpisodeOne = "THE BLUE MUG"
-CONST EpisodeTwo = "THE ROOM"
+CONST SeasonTitle = "THE DARKNESS OF TIME"
+CONST PrologueTitle = "In the Dark"
+CONST EpisodeOne = "The Blue Mug"
+CONST EpisodeTwo = "The Room"
 CONST EpisodeThree = "Episode 3"
 CONST EpisodeFour = "Episode 4"
 CONST EpisodeFive = "Episode 5"
@@ -23,7 +23,37 @@ CONST TheRogue = "The rogue"
 CONST TheFighter = "The fighter"
 CONST TheWizard = "The wizard"
 
+// Proceed
+VAR MoveStealth = "move along hoping to remain undetected"
+TODO: add a STEALTH roll option
+
+VAR MoveWalk = "move at a walk"
+//A character can walk 8 hours in a day of travel without a problem. Walking for longer than that can wear him or her out (see Forced March, below).
+VAR MoveHustle = "move briskly"  
+// A character can hustle for 1 hour without a problem. Hustling for a second hour in between sleep cycles deals 1 point of nonlethal damage, and each additional hour deals twice the damage taken during the previous hour of hustling. A character who takes any nonlethal damage from hustling becomes fatigued. A fatigued character can’t run or charge and takes a penalty of -2 to Strength and Dexterity. Eliminating the nonlethal damage also eliminates the fatigue.
+VAR MoveRun = "run"
+// A character can’t run for an extended period of time.
+
 ->StartMenu
+=== StartMenu ===
+<h3>Start Menu</h3>
+<em>Choose wisely</em>
++ {not Preface} [Preface]
+    ->Preface
++ [PRESS START]
+    -> Prologue
++ [{EpisodeOne}]
+    -> Ep1
++ [{EpisodeTwo}]
+    -> Ep2
++ [{EpisodeThree}]
+    -> Ep3
++ [{EpisodeFour}]
+    -> Ep4
++ [{EpisodeFive}]
+    -> Ep5
+
+-> DONE
 
 ==== Preface ====
 #audio: fx-valleys
@@ -43,27 +73,9 @@ This section is for SEASON to keep INKY from getting confused. Its also a place 
     
 ->DONE
 
-=== StartMenu ===
-<h3>Start Menu</h3>
-<em>Choose wisely</em>
-+ {not Preface} [Preface]
-    ->Preface
-+ [*** PRESS START ***]
-    -> Prologue
-+ [{EpisodeOne}]
-    -> Ep1
-+ [{EpisodeTwo}]
-    -> Ep2
-+ [{EpisodeThree}]
-    -> Ep3
-+ [{EpisodeFour}]
-    -> Ep4
-+ [{EpisodeFive}]
-    -> Ep5
-
--> DONE
-
 === Prologue ===
+# clears
+
 <h3>{PrologueTitle}</h3>
 #audio:salt-mine
 You wake up in a cool, dry room. Inky blackness engulfs the senses. You get the impression that you are in some sort of dungeon or cave, but it's difficult to {~sense|perceive} much.
@@ -74,7 +86,7 @@ You wake up in a cool, dry room. Inky blackness engulfs the senses. You get the 
     ->Ep1
     
 
-== Ep1 ==
+=== Ep1 ===
 // Puzzle Or Roleplaying Challenge
 <h3>{EpisodeOne}</h3>
 #audio: BlueMug
@@ -85,10 +97,10 @@ She starts to tear up.
 "I don't have much money, but I need him back!"
 She pleads, "Please, someone help!"
 Everyone in the inn knew the perfect party of adventurers for the job.
-+ [next] ->1_1_1
-+ [<em>SKIP EPISODE</em>] ->Ep1.Ep1_END
+    + [next]->1_1_1
++ [<em>SKIP EPISODE</em>] -> Ep1_END
 
-=1_1_1
+== 1_1_1
 But that party wasn't in Canis Villa or even in the Calda Vale region right now. They were off on some grand adventure for the queen last someone heard. 
 No one really wants this sort of job including most of your party. It offers little in the way of reward and plenty in the form of danger. 
 From your party, {TheFighter} speaks up "My lady, we shall locate your lost husband." #Fighter
@@ -96,7 +108,7 @@ He turns to the rest of you.
 * "Helping a lady in distress is the proper thing to do! Right guys?"
     ->1_1_2 
 
-=1_1_2
+== 1_1_2
 Its going to be super awkward now to say no.
 * "Sure we can try to find him" you say
 - Your party reluctantly agrees.
@@ -104,62 +116,79 @@ She gives you directions to the mine.
 * You show up to the mine [the next day].
     ->1_2_1
 
-=1_2_1
+== 1_2_1
 <h3>THE MINE</h3> #location: mine arrival
 You arrive to the mine without incident. There doesn't seem to be anyone around though. This seems odd considering the mine just opened and was presumed to be very profitable still.
 -> 1_2_2
 
-=1_2_2
+== 1_2_2
 #location: mine ambience
 The party makes its way into the mine. 
 Pick axes, hammers, and other tools of the trade are scattered all over haphhazardly. It would appear the miners left in a hurry. Then the party's rogue spots the blood.
 There was a very nasty encounter in this tunnel. Judging by the amount of blood, someone or something didn't fair very well.
-+ Take a closer look
++ Take a closer look. <>
     ->look_closer_A
-+ Move along
++ You keeping going. <>
     ->look_closer_B
 
-=look_closer_A
+= look_closer_A
 You decide to take a closer look.
 + [WISDOM pass]
     ->wisdom_pass
 + [WISDOM fail]
     ->widsom_fail
     
-=wisdom_pass
+= wisdom_pass
 There is A LOT of blood. You notice the very large bloody paw prints heading deeper into the mine. They appear to be from a large quadruped. A wolf or bear perhaps? 
 +[next]
-    ->tunnel_proceed
-=widsom_fail
+    ->tunnel_movement
+= widsom_fail
 There is A LOT of blood.
 + [next]
-    ->tunnel_proceed
+    ->tunnel_movement
     
-=look_closer_B
-You consider taking a closer look, but decide to quickly move along and push in deeper.
+= look_closer_B
+You consider taking a closer look, but decide it'd be best keep moving.
 + [next]
-    ->tunnel_proceed
+    ->tunnel_movement
     
-=tunnel_proceed
-+ You proceed down the tunnel cautiously.
-    ->spiders_1
-+ You proceed down the tunnel.
-    ->spiders_1
+== tunnel_movement
++ You {MoveStealth} down the tunnel.
+    ->tunnel_stealth
++ You {MoveWalk} down the tunnel.
+    ->tunnel_walk
++ You {MoveHustle} down the tunnel.
+    ->tunnel_hustle
++ You {MoveRun} down the tunnel.
+    ->tunnel_run
     
-=spiders_1
-A few minor twists and turns later...{~two|three} large menacing spiders at the edge of the torch light suddenly rush up the tunnel towards the party, chattering loudly. (<em>unless you stated early that the party was moving cautiously, the party is caught by surprise!) #spiders
-+ [Fight]
+== tunnel_stealth
+->spiders
+== tunnel_walk
+->spiders
+== tunnel_hustle
+->spiders
+==tunnel_run
+->spiders
+== spiders
+A few minor twists and turns later...{~two|three} large menacing spiders at the edge of the torch light suddenly rush up the tunnel towards the party, chattering loudly. #spiders
++ {tunnel_stealth} [You surprise the beasts. You get an extra attack and fight with advantage the first round!]
     ->spiders_2A
-+ [Flee ]
++ {tunnel_stealth} [You may attempt to flee undetected]
     ->spiders_2A
-
++ {tunnel_walk} [Fight!]
+    ->spiders_2A
++ {tunnel_walk} [Flee!]
+    ->spiders_2A
++ {tunnel_hustle or tunnel_run} [You are surprised by the beasts! They get the first attack and with advantage]
+    ->spiders_2A
 = spiders_2A
-To flee now would be unwise (<em>the spiders get bonus attacks if you insist</em>). 
+// To flee now would be unwise (<em>the spiders get bonus attacks if you insist</em>). 
 The party prepares for and engages battle!
 + [next]
     ->spiders_3
 
-=spiders_3
+= spiders_3
 {TheFighter} hacks and slashes at the legs of one spider. {TheRogue} stabs at the multiple eyes on another spider and effectively blinds it. {TheWizard} finishes them off with a volley of magic missles. #audio: magic missle #audio:fleshy stab
 
 + Victory!
@@ -167,7 +196,7 @@ The party prepares for and engages battle!
 // + Continue to fight
 
 = spiders_win
-The party quicky defeats the spiders. 
+The party defeats the spiders. 
 + Loot the spiders
     ->spiders_loot
     
@@ -240,7 +269,7 @@ You hurl the vial of acid at the bear's face.
 It was too much to hope for that the cave bear would run off. It falls and rolls on the ground. Then it gets up and charges you. You shove the wizard aside as you turn tail and literally run for your life.
 ->Ep1_END
 
-=Ep1_END
+== Ep1_END
 What a wild series of events...
 
 +{Ep2 < 1} [{EpisodeTwo}]
