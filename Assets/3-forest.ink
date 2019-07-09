@@ -2,51 +2,48 @@
 #author: Master Scoy
 
 // VARIABLES for Story Outline
-VAR SeasonTitle = "Forest of Time"
-VAR PrologueTitle = "THE BLUE MUG"
-VAR EpisodeOne = "Room 1"
-VAR EpisodeTwo = "Room 2"
-VAR EpisodeThree = "Room 3"
-VAR EpisodeFour = "Room 4"
-VAR EpisodeFive = "Room 5"
-VAR EpilogueTitle = "Epilogue"
+VAR Season3Title = "Forest of Time"
+VAR 3PrologueTitle = "THE BLUE MUG"
+VAR 3EpisodeOne = "Room 1"
+VAR 3EpisodeTwo = "Room 2"
+VAR 3EpisodeThree = "Room 3"
+VAR 3EpisodeFour = "Room 4"
+VAR 3EpisodeFive = "Room 5"
+VAR 3EpilogueTitle = "Epilogue"
 
-->StartMenu
+->3StartMenu
 
-==== Preface ====
+==== 3Preface ====
 #audio: fx-valleys
 <em>Welcome weary adventurer! This story takes place in <em>Regio Scientiae: A Land of Understanding. Its a world of magic and steampunk, and a place for you to develop grit and explore curiosities. The quest narratives maybe done solo. However, they are best experienced the first time as playful interaction with the game master and neighboring, real life players.
 + [MENU]
-    ->StartMenu
+    ->3StartMenu
 
 ==== P0 ====
 This knot is for the Series and Season Number. For Example "Preface" and "Season 0."
 Purpose: to keep INKY from getting confused between each season "S" and episode "Ep"
--> Season0
-
-=== Season0 ===
 +[START MENU]
-    ->StartMenu
+    ->3StartMenu
     
 ->DONE
 
-=== StartMenu ===
+=== 3StartMenu ===
 <h3>Start Menu</h3>
 <em>Choose wisely</em>
-+ {not Preface} [Preface]
-    ->Preface
++ {not 3Preface} [Preface]
+    ->3Preface
 + [PRESS START]
-    -> Prologue
+    -> 3Prologue
 + [Episode 1]
-    -> Ep1
+    -> 3Ep1
 + [Episode 2]
-    -> Ep2
+    -> 3Ep2
 + [Episode 3]
-    -> Ep3
+    -> 3Ep3
 + [Episode 4]
-    -> Ep4
+    -> 3Ep4
 + [Episode 5]
-    -> Ep5
+    -> 3Ep5
 
 
 
@@ -55,69 +52,68 @@ Purpose: to keep INKY from getting confused between each season "S" and episode 
 
 
 ->DONE
-=== Prologue ===
-<h3>{PrologueTitle}</h3>
+=== 3Prologue ===
+<h3>{3PrologueTitle}</h3>
 +[START MENU]
-    ->StartMenu
+    ->3StartMenu
 +[NEXT]
-    ->Ep1
+    ->3Ep1
     
 ->DONE
 
-=== S1 ===
-<h1>{SeasonTitle}</h1>
+<h1>{Season3Title}</h1>
 This section is for SEASON to keep INKY from getting confused. Its also a place to write a season summary without special text formatting. It shouldn't be visible to the reader. 
 +[START MENU]
-    ->StartMenu
+    ->3StartMenu
     
 ->DONE
 
-== Ep1 ==
-<h3>{EpisodeOne}</h3>
+== 3Ep1 ==
+<h3>{3EpisodeOne}</h3>
 +[START MENU]
-    ->StartMenu
+    ->3StartMenu
 +[NEXT]
-    ->Ep1
+    ->3Ep1
     
 ->DONE
 
-== Ep2 ==
-<h3>{EpisodeTwo}</h3>
+== 3Ep2 ==
+<h3>{3EpisodeTwo}</h3>
 +[START MENU]
-    ->StartMenu
+    ->3StartMenu
 +[NEXT]
-    ->Ep3
+    ->3Ep3
     
 ->DONE
 
-== Ep3 ==
-<h3>{EpisodeThree}</h3>
+== 3Ep3 ==
+<h3>{3EpisodeThree}</h3>
 +[START MENU]
-    ->StartMenu
+    ->3StartMenu
 +[NEXT]
-    ->Ep4
+    ->3Ep4
     
 ->DONE
 
-== Ep4 ==
-<h3>{EpisodeFour}</h3>
+== 3Ep4 ==
+<h3>{3EpisodeFour}</h3>
 +[START MENU]
-    ->StartMenu
+    ->3StartMenu
 +[NEXT]
-    ->Ep5
+    ->3Ep5
     
 ->DONE
 
-== Ep5 ==
-<h3>{EpisodeFive}</h3>
+== 3Ep5 ==
+<h3>{3EpisodeFive}</h3>
 
 +[START MENU]
-    ->StartMenu
+    ->3StartMenu
 +[NEXT]
-    ->Epilogue
+    ->3Epilogue
     
 ->DONE
 
-== Epilogue ==
-<h3>{EpilogueTitle}</h3>
+== 3Epilogue ==
+<h3>{3EpilogueTitle}</h3>
 ->END

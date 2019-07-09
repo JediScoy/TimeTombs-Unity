@@ -2,14 +2,14 @@
 #author: Master Scoy
 
 // VARIABLES for Story Outline
-VAR SeasonTitle = "Desert of Time"
-VAR PrologueTitle = "PROLOGUE: THE BLUE MUG"
-VAR EpisodeOne = "EPISODE 1: INSULAR MARSUPLIA"
-VAR EpisodeTwo = "EPISODE 2: ARRAKIS"
-VAR EpisodeThree = "EPISODE 3:"
-VAR EpisodeFour = "EPISODE 4:"
-VAR EpisodeFive = "EPISODE 5:"
-VAR EpilogueTitle = "EPILOGUE"
+VAR Season2Title = "Desert of Time"
+VAR 2PrologueTitle = "PROLOGUE: THE BLUE MUG"
+VAR 2EpisodeOne = "EPISODE 1: INSULAR MARSUPLIA"
+VAR 2EpisodeTwo = "EPISODE 2: ARRAKIS"
+VAR 2EpisodeThree = "EPISODE 3:"
+VAR 2EpisodeFour = "EPISODE 4:"
+VAR 2EpisodeFive = "EPISODE 5:"
+VAR 2EpilogueTitle = "EPILOGUE"
 
 VAR You = "You"
 VAR you = "you"
@@ -25,52 +25,52 @@ VAR TheWizard = "The wizard"
 VAR thewizard = "the wizard"
 
 
-->StartMenu
-==== Preface ====
+->2StartMenu
+==== 2Preface ====
 #audio: fx-valleys
 <em>Welcome weary adventurer! This story takes place in <em>Regio Scientiae: A Land of Understanding. Its a world of magic and steampunk, and a place for you to develop grit and explore curiosities. The quest narratives maybe done solo. However, they are best experienced the first time as playful interaction with the game master and neighboring, real life players.
 + [MENU]
-    ->StartMenu
+    ->2StartMenu
 
-=== StartMenu ===
+=== 2StartMenu ===
 <h3>Start Menu</h3>
 <em>Choose wisely</em>
-// + {not Preface} [Preface]
-//    ->Preface
+// + {not 2Preface} [2Preface]
+//    ->2Preface
 // + [PRESS START]
-//    -> Prologue
+//    -> 2Prologue
 + [Episode 1]
-    -> Ep1
+    -> 2Ep1
 // + [Episode 2]
-    -> Ep2
+    -> 2Ep2
 // + [Episode 3]
-    -> Ep3
+    -> 2Ep3
 // + [Episode 4]
-    -> Ep4
+    -> 2Ep4
 // + [Episode 5]
-    -> Ep5
+    -> 2Ep5
 -> DONE
 === AboutSeason2 ===
-<h1>{SeasonTitle}</h1>
+<h1>{Season2Title}</h1>
 This section is for SEASON to keep INKY from getting confused. Its also a place to write a season summary without special text formatting. It shouldn't be visible to the reader. 
 +[START MENU]
-    ->StartMenu
+    ->2StartMenu
     
 ->DONE
 
-=== Prologue ===
-<h3>{PrologueTitle}</h3>
+=== 2Prologue ===
+<h3>{2PrologueTitle}</h3>
 +[START MENU]
-    ->StartMenu
+    ->2StartMenu
 +[NEXT]
-    ->Ep1
+    ->2Ep1
     
 ->DONE
 
 
 
-=== Ep1 ===
-<h3>{EpisodeOne}</h3>
+=== 2Ep1 ===
+<h3>{2EpisodeOne}</h3>
 {Your} party ventures from the ship's cabin onto the deck. A band of eight crewman have offered to join you ashore for your protection against indigenous animals. This strikes you as odd. The captain acts mistrustful. He suspects you looking for previously hidden treasure and not gathering research about desert animals.
 + You shrug your shoulders with indifference.
     ->c1
@@ -164,51 +164,51 @@ The captain meets you as soon as you get aboard.
 - He continues even more seriously, “This is not a fight we can win. This battle needs heroes and siege engines.”
 The captain hastily writes a note and attaches it to a crow and sends it off toward Storm Crown.
 +[START MENU]
-    ->StartMenu
+    ->2StartMenu
 +[NEXT]
-    ->Ep2
+    ->2Ep2
     
 ->DONE
 
-== Ep2 ==
-<h3>{EpisodeTwo}</h3>
+== 2Ep2 ==
+<h3>{2EpisodeTwo}</h3>
 +[START MENU]
-    ->StartMenu
+    ->2StartMenu
 +[NEXT]
-    ->Ep3
+    ->2Ep3
     
 ->DONE
 
-== Ep3 ==
-<h3>{EpisodeThree}</h3>
+== 2Ep3 ==
+<h3>{2EpisodeThree}</h3>
 +[START MENU]
-    ->StartMenu
+    ->2StartMenu
 +[NEXT]
-    ->Ep4
+    ->2Ep4
     
 ->DONE
 
-== Ep4 ==
-<h3>{EpisodeFour}</h3>
+== 2Ep4 ==
+<h3>{2EpisodeFour}</h3>
 +[START MENU]
-    ->StartMenu
+    ->2StartMenu
 +[NEXT]
-    ->Ep5
+    ->2Ep5
     
 ->DONE
 
-== Ep5 ==
-<h3>{EpisodeFive}</h3>
+== 2Ep5 ==
+<h3>{2EpisodeFive}</h3>
 
 +[START MENU]
-    ->StartMenu
+    ->2StartMenu
 +[NEXT]
-    ->Epilogue
+    ->2Epilogue
     
 ->DONE
 
-== Epilogue ==
-<h3>{EpilogueTitle}</h3>
+== 2Epilogue ==
+<h3>{2EpilogueTitle}</h3>
 ->END
 
 -> END

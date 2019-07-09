@@ -2,14 +2,14 @@
 # author: Master Scoy
 
 // Story Outline
-CONST SeasonTitle = "THE DARKNESS OF TIME"
-CONST PrologueTitle = "In the Dark"
-CONST EpisodeOne = "The Blue Mug"
-CONST EpisodeTwo = "The Room"
-CONST EpisodeThree = "Episode 3"
-CONST EpisodeFour = "Episode 4"
-CONST EpisodeFive = "Episode 5"
-CONST EpilogueTitle = "Epilogue"
+CONST Season0Title = "The Darkness of Time"
+CONST 0PrologueTitle = "In the Dark"
+CONST 0EpisodeOne = "The Blue Mug"
+CONST 0EpisodeTwo = "The Room"
+CONST 0EpisodeThree = "Episode 3"
+CONST 0EpisodeFour = "Episode 4"
+CONST 0EpisodeFive = "Episode 5"
+CONST 0EpilogueTitle = "Epilogue"
 
 // INVENTORY VARIABLES
 VAR food = "no food"
@@ -34,61 +34,55 @@ VAR MoveHustle = "move briskly"
 VAR MoveRun = "run"
 // A character can’t run for an extended period of time.
 
-->StartMenu
-=== StartMenu ===
+->0StartMenu
+
+=== 0StartMenu ===
 <h3>Start Menu</h3>
 <em>Choose wisely</em>
-+ {not Preface} [Preface]
-    ->Preface
++ {not 0Preface} [<em>Preface</em>]
+    ->0Preface
 + [PRESS START]
-    -> Prologue
-+ [{EpisodeOne}]
-    -> Ep1
-+ [{EpisodeTwo}]
-    -> Ep2
-+ [{EpisodeThree}]
-    -> Ep3
-+ [{EpisodeFour}]
-    -> Ep4
-+ [{EpisodeFive}]
-    -> Ep5
-
+    ->0Prologue
++ [{0EpisodeOne}]
+    ->0Ep1
++ [{0EpisodeTwo}]
+    ->0Ep2
++ [{0EpisodeThree}]
+   ->0Ep3
++ [{0EpisodeFour}]
+    ->0Ep4
++ [{0EpisodeFive}]
+    ->0Ep5
++ [{0EpilogueTitle}]
+    ->0Epilogue
++ [<em>About</em>]
+    ->AboutSeason0
+#clear
 -> DONE
 
-==== Preface ====
+==== 0Preface ====
+#clears
 #audio: fx-valleys
 <em>Welcome weary adventurer! This story takes place in <em>Regio Scientiae: A Land of Understanding. Its a world of magic and steampunk, and a place for you to develop grit and explore curiosities. The quest narratives maybe done solo. However, they are best experienced the first time as playful interaction with the game master and neighboring, real life players.
 + [MENU]
-    ->StartMenu
+    ->0StartMenu
 
-==== AboutSeason0 ====
-This knot is for the Series and Season Number. For Example "Preface" and "Season 0."
-Purpose: to keep INKY from getting confused between each season "S" and episode "Ep" ->Season0
-
-=== Season0 ===
-<h1>{SeasonTitle}</h1>
-This section is for SEASON to keep INKY from getting confused. Its also a place to write a season summary without special text formatting. It shouldn't be visible to the reader. 
-+[START MENU]
-    ->StartMenu
-    
-->DONE
-
-=== Prologue ===
+=== 0Prologue ===
 # clears
 
-<h3>{PrologueTitle}</h3>
+<h3>{0PrologueTitle}</h3>
 #audio:salt-mine
 You wake up in a cool, dry room. Inky blackness engulfs the senses. You get the impression that you are in some sort of dungeon or cave, but it's difficult to {~sense|perceive} much.
 
 +[Take action]
-    ->Ep2
+    ->0Ep2
 +[Gather your thoughts]
-    ->Ep1
+    ->0Ep1
     
 
-=== Ep1 ===
+=== 0Ep1 ===
 // Puzzle Or Roleplaying Challenge
-<h3>{EpisodeOne}</h3>
+<h3>{0EpisodeOne}</h3>
 #audio: BlueMug
 <em>Previous night at the Blue Mug.</em> 
 A distraught woman comes in.
@@ -97,8 +91,10 @@ She starts to tear up.
 "I don't have much money, but I need him back!"
 She pleads, "Please, someone help!"
 Everyone in the inn knew the perfect party of adventurers for the job.
-    + [next]->1_1_1
-+ [<em>SKIP EPISODE</em>] -> Ep1_END
++ [next]
+    ->1_1_1
++ [<em>SKIP EPISODE</em>]
+    ->0Ep1_END
 
 == 1_1_1
 But that party wasn't in Canis Villa or even in the Calda Vale region right now. They were off on some grand adventure for the queen last someone heard. 
@@ -267,36 +263,44 @@ The wizard blast the monstrous cave bear with another volley of magic missiles. 
 You hurl the vial of acid at the bear's face.
 
 It was too much to hope for that the cave bear would run off. It falls and rolls on the ground. Then it gets up and charges you. You shove the wizard aside as you turn tail and literally run for your life.
-->Ep1_END
+->0Ep1_END
 
-== Ep1_END
+== 0Ep1_END
 What a wild series of events...
 
-+{Ep2 < 1} [{EpisodeTwo}]
-    ->Ep2
-+{Ep2 >0} [NEXT EPISODE]
-    ->Ep3
++{0Ep2 < 1} [{0EpisodeTwo}]
+    ->0Ep2
++{0Ep2 >0} [NEXT EPISODE]
+    ->0Ep3
 +[<strong>Ω</strong>]
-    ->StartMenu    
+    ->0StartMenu    
 ->DONE
 
-== Ep2 ==
-<h3>{EpisodeTwo}</h3>
+== 0Ep2 ==
+<h3>{0EpisodeTwo}</h3>
 // Entrance And Guardian
 # audio:SaltMine
     ->senses_in_the_dark
     
 =senses_0
-You wake up in a cool, dry room. You are engulfed in inky blackness. You get the impression that you are in some sort of dungeon or cave, but it's difficult to {~sense|interpret|perceive} much. ->senses_in_the_dark
+You wake up in a cool, dry room. You are engulfed in inky blackness. You get the impression that you are in some sort of dungeon or cave, but it's difficult to {~sense|interpret|perceive} much.
+    ->senses_in_the_dark
 
 =senses_in_the_dark
-* [Peer into the darkness] ->2_1_see
-* [Listen intently] ->2_1_hear
-* [Lick the floor] -> 2_1_taste
-* [Inhale deeply] ->2_1_smell
-* [Touch a hand to the floor] ->2_1_touch
-* {senses_in_the_dark > 3} [Reach into your tunic] ->2_2
-+ [<em>SKIP EPISODE</em>] ->Ep2.Ep2_END
+* [Peer into the darkness]
+    ->2_1_see
+* [Listen intently]
+    ->2_1_hear
+* [Lick the floor]
+    -> 2_1_taste
+* [Inhale deeply]
+    ->2_1_smell
+* [Touch a hand to the floor]
+    ->2_1_touch
+* {senses_in_the_dark > 3} [Reach into your tunic]
+    ->2_2
++ [<em>SKIP EPISODE</em>] 
+    ->0Ep2_END
 
 =2_1_see
 You peer into the dark, but don't see much. {~Illumination|Light} of some type would be extremely helpful.
@@ -363,19 +367,19 @@ You are in a tunnel approximately 3 meters across and 2.5 meters tall. It appear
 
 
 
-=Ep2_END
+= 0Ep2_END
 The light spills into a tunnel...
-+{Ep1 > 0} [NEXT EPISODE]
-    ->Ep3
-+{Ep1 < 1} [Gather your thoughts before leaving the room]
-    ->Ep1
++{0Ep1 > 0} [NEXT EPISODE]
+    ->0Ep3
++{0Ep1 < 1} [Gather your thoughts before leaving the room]
+    ->0Ep1
 +[<strong>Ω</strong>]
-    ->StartMenu
+    ->0StartMenu
 ->DONE
 
-== Ep3 ==
+== 0Ep3 ==
 TODO: Write Episode 3
-<h3>{EpisodeThree}</h3>
+<h3>{0EpisodeThree}</h3>
 You enter the tunnel. After walking for a minute you notice the tunnel starts to become a mixture of rock with veins of salt. Another minute of walking and you come to a crossroads. By now the salt has been reduced to veins a few inches thick.
 // =2
 // You start walking through the tunnel. 
@@ -384,32 +388,43 @@ You enter the tunnel. After walking for a minute you notice the tunnel starts to
 // * Sit on the floor ->Ep2_END
 
 +[NEXT EPISODE]
-    ->Ep4
+    ->0Ep4
 +[<strong>Ω</strong>]
-    ->StartMenu    
+    ->0StartMenu    
 ->DONE
 
-== Ep4 ==
+== 0Ep4 ==
 TODO: Write Episode 4
-<h3>{EpisodeFour}</h3>
+<h3>{0EpisodeFour}</h3>
 
 +[NEXT EPISODE]
-    ->Ep5
+    ->0Ep5
 +[<strong>Ω</strong>]
-    ->StartMenu    
+    ->0StartMenu    
 ->DONE
 
-== Ep5 ==
+== 0Ep5 ==
 TODO: Write Episode 5
-<h3>{EpisodeFive}</h3>
+<h3>{0EpisodeFive}</h3>
 
 
 +[NEXT EPISODE]
-    ->Epilogue
+    ->0Epilogue
 +[<strong>Ω</strong>]
-    ->StartMenu    
+    ->0StartMenu    
 ->DONE
 
-== Epilogue ==
-<h3>{EpilogueTitle}</h3>
+== 0Epilogue ==
+<h3>{0EpilogueTitle}</h3>
 ->END
+
+=== AboutSeason0 ===
+The season, {Season0Title}, introduces students to a Choose Your Own Adventure (CYOA) narrative format. We use the narrative to also play a RPG version similar to D&D in our classroom. 
+<h4>Purpose</h4>
+to keep INKY from getting confused between each season "S" and episode "Ep"
+COURSE: Biology
+FIRST DRAFT: Summer 2019
++[START MENU]
+    ->0StartMenu
+    
+->DONE

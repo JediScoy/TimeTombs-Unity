@@ -5,61 +5,60 @@
 
 // INVENTORY VARIABLES
 
-VAR food = "no food"
-VAR weapons = "no weapons"
-VAR armor = "no armor"
-VAR items = "flint and steel"
+VAR 1food = "no food"
+VAR 1weapons = "no weapons"
+VAR 1armor = "no armor"
+VAR 1items = "flint and steel"
 
 VAR PROLOGUE = "THE BLUE MUG"
 
 // VARIABLES for Story Outline
-VAR SeasonTitle = "Mountains of Time"
-VAR PrologueTitle = "THE BLUE MUG"
-VAR EpisodeOne = "THE ILLNESS"
-VAR EpisodeTwo = "THE MOUNTAIN"
-VAR EpisodeThree = ""
-VAR EpisodeFour = "THE CAVE"
-VAR EpisodeFive = ""
-VAR EpilogueTitle = "Epilogue"
+VAR Season1Title = "Mountains of Time"
+VAR 1PrologueTitle = "THE BLUE MUG"
+VAR 1EpisodeOne = "THE ILLNESS"
+VAR 1EpisodeTwo = "THE MOUNTAIN"
+VAR 1EpisodeThree = ""
+VAR 1EpisodeFour = "THE CAVE"
+VAR 1EpisodeFive = ""
+VAR 1EpilogueTitle = "Epilogue"
 
-->StartMenu
-==== Preface ====
+->1StartMenu
+==== 1Preface ====
 #audio: fx-valleys
 <em>Welcome weary adventurer! This story takes place in <em>Regio Scientiae: A Land of Understanding. Its a world of magic and steampunk, and a place for you to develop grit and explore curiosities. The quest narratives maybe done solo. However, they are best experienced the first time as playful interaction with the game master and neighboring, real life players.
 + [MENU]
-    ->StartMenu
+    ->1StartMenu
 
 ==== Season1 ====
-<h1>{SeasonTitle}</h1>
+<h1>{Season1Title}</h1>
 This section is for SEASON to keep INKY from getting confused. Its also a place to write a season summary without special text formatting. It shouldn't be visible to the reader. 
 +[START MENU]
-    ->StartMenu
+    ->1StartMenu
 
 ->DONE
 
-=== StartMenu ===
+=== 1StartMenu ===
 <h3>Start Menu</h3>
 <em>Choose wisely</em>
-+ {not Preface} [Preface]
-    ->Preface
++ {not 1Preface} [Preface]
+    ->1Preface
 + [PRESS START]
-    -> Prologue
+    -> 1Prologue
 + [Episode 1]
-    -> Ep1
+    -> 1Ep1
 + [Episode 2]
-    -> Ep2
+    -> 1Ep2
 + [Episode 3]
-    -> Ep3
+    -> 1Ep3
 + [Episode 4]
-    -> Ep4
+    -> 1Ep4
 + [Episode 5]
-    -> Ep5
+    -> 1Ep5
 
 -> DONE
 
-=== Prologue ===
-<h3>{PrologueTitle}</h3>
-<h3>PROLOGUE: {PROLOGUE}</h3>
+=== 1Prologue ===
+<h3>{1PrologueTitle}</h3>
 "Welcome weary adventurers!" Jane, the serving maid, says as she greets you with a big smile.
 Your party is once again at the Blue Mug. The owner likes to brag about it being the best inn and tavern in the village. The joke of course is that its the only one.
 Jane asks, "What can I get you?" 
@@ -79,15 +78,15 @@ Aer slowly stands up.
 "Come with us." the second man says.
 Your party quickly stands to go. Another dozen or so townsfolk also rise. The makeshift gang quickly makes its way to the edge of town to Timothy's small farm.
 +[START MENU]
-    ->StartMenu
+    ->1StartMenu
 +[NEXT]
-    ->Ep1
+    ->1Ep1
     
 ->DONE
 
-== Ep1 ==
+== 1Ep1 ==
 // Entrance And Guardian
-<h3>EPISODE ONE: {EpisodeOne}</h3>
+<h3>EPISODE ONE: {1EpisodeOne}</h3>
 Alatar says, "I think its best the townsfolk stay outside."
 Some of them start to grumble, "Who are you to tell us to stay outside?"
 Darius steps up and flexes his massive arms.
@@ -152,14 +151,14 @@ Darius grumbles, "If we're going to do these we better have some good food to ea
 “Amhairghin, says, "That initial attack really took a lot out of me. I'm going to need an hour or so for a short rest before setting out."
 "Good this will give us time to talk with locals about what's available and what's best for an epic endurance run," you say.
 +[START MENU]
-    ->StartMenu
+    ->1StartMenu
 +[NEXT]
-    ->Ep2
+    ->1Ep2
     
 ->DONE
 
-== Ep2 ==
-<h3>EPISODE TWO: {EpisodeTwo}</h3>
+== 1Ep2 ==
+<h3>EPISODE TWO: {1EpisodeTwo}</h3>
 “It's too bad that you didn't have more time for training. Twelve months or more would be great an ultra run like this, but even three or four months would be extremely beneficial," says Timothy and Becca's dad.
 He continues, "My family would spend 80% of the week running modest distances at a modest intensity. Maybe we'd run really far once or twice a week, but it'd still be a low intensity. About 20% of the time we'd run or stack wood with great intensity. The human body is really quite amazing. You give it just the right amount of stress and it responds by getting stronger!”
 
@@ -215,42 +214,42 @@ The next day she seems to be more recovered than your party! You remind her fath
 
 By the end of the week both your party and Becca have made a full recovery.
 +[START MENU]
-    ->StartMenu
+    ->1StartMenu
 +[NEXT]
-    ->Ep3
+    ->1Ep3
     
 ->DONE
 
-== Ep3 ==
-<h3>{EpisodeThree}</h3>
+== 1Ep3 ==
+<h3>{1EpisodeThree}</h3>
 +[START MENU]
-    ->StartMenu
+    ->1StartMenu
 +[NEXT]
-    ->Ep4
+    ->1Ep4
     
 ->DONE
 
-== Ep4 ==
-<h3>{EpisodeFour}</h3>
+== 1Ep4 ==
+<h3>{1EpisodeFour}</h3>
 +[START MENU]
-    ->StartMenu
+    ->1StartMenu
 +[NEXT]
-    ->Ep5
+    ->1Ep5
     
 ->DONE
 
-== Ep5 ==
-<h3>{EpisodeFive}</h3>
+== 1Ep5 ==
+<h3>{1EpisodeFive}</h3>
 
 +[START MENU]
-    ->StartMenu
+    ->1StartMenu
 +[NEXT]
-    ->Epilogue
+    ->1Epilogue
     
 ->DONE
 
-== Epilogue ==
-<h3>{EpilogueTitle}</h3>
+== 1Epilogue ==
+<h3>{1EpilogueTitle}</h3>
 You find yourselves sitting at the Blue Mug when the serving maid Jane comes up to you.
 "Welcome weary adventures!"
 
