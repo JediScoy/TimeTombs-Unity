@@ -1,47 +1,29 @@
 # title: The Darkness of Time
 # author: Master Scoy
 
-// Story Outline
-CONST Season0Title = "The Darkness of Time"
-CONST 0PrologueTitle = "In the Dark"
-CONST 0EpisodeOne = "The Blue Mug"
-CONST 0EpisodeTwo = "The Mine"
-CONST 0EpisodeThree = "The Room"
-CONST 0EpisodeFour = "The Tunnel"
-CONST 0EpisodeFive = "Episode 5"
-CONST 0EpilogueTitle = "Epilogue"
-
-// INVENTORY VARIABLES
-VAR food = "no food"
-VAR weapons = "no weapons"
-VAR armor = "no armor"
-VAR items = "no special items, not even flint and steel"
+// STORY OUTLINE
+CONST Season0Title =    "The Darkness of Time"
+CONST 0PrologueTitle =  "In the Dark"
+CONST 0EpisodeOne =     "The Blue Mug"
+CONST 0EpisodeTwo =     "The Mine"
+CONST 0EpisodeThree =   "The Room"
+CONST 0EpisodeFour =    "The Tunnel"
+CONST 0EpisodeFive =    "Time"
+CONST 0EpilogueTitle =  "Epilogue"
 
 // CHARACTERS
-VAR TheCleric = "The cleric"
-VAR TheRogue = "The rogue"
-VAR TheFighter = "The fighter"
-VAR TheWizard = "The wizard"
-VAR theCleric = "the cleric"
-VAR theRogue = "the rogue"
-VAR theFighter = "the fighter"
-VAR theWizard = "the wizard"
+VAR TheCleric =         "The cleric"
+VAR theCleric =         "the cleric"
 
-VAR ServingMaid = "Jane"
-VAR YoungMiner = "James"
-VAR YoungMinerWife = "Susan"
+VAR TheRogue =          "The rogue"
+VAR theRogue =          "the rogue"
 
-// Proceed
-VAR MoveStealth = "move along hoping to remain undetected"
-TODO: add a STEALTH roll option
+VAR TheFighter =        "The fighter"
+VAR theFighter =        "the fighter"
 
-VAR MoveWalk = "move at a walk"
-//A character can walk 8 hours in a day of travel without a problem. Walking for longer than that can wear him or her out (see Forced March, below).
-VAR MoveHustle = "move briskly"  
-// A character can hustle for 1 hour without a problem. Hustling for a second hour in between sleep cycles deals 1 point of nonlethal damage, and each additional hour deals twice the damage taken during the previous hour of hustling. A character who takes any nonlethal damage from hustling becomes fatigued. A fatigued character can’t run or charge and takes a penalty of -2 to Strength and Dexterity. Eliminating the nonlethal damage also eliminates the fatigue.
-VAR MoveRun = "run"
-// A character can’t run for an extended period of time.
-CONST InitiativeExplained = "Everyone in combat or near combat, rolls a d20 to determine the order of each player's actions. For example, if PLAYER ONE rolls a 5 and PLAYER TWO rolls a 15, then PLAYER TWO performs his or her action before PLAYER TWO"
+VAR TheWizard =         "The wizard"
+VAR theWizard =         "the wizard"
+
 
 ->0StartMenu
 
@@ -62,16 +44,19 @@ CONST InitiativeExplained = "Everyone in combat or near combat, rolls a d20 to d
     ->0Ep4
 + [{0EpisodeFive}]
     ->0Ep5
-+ [{0EpilogueTitle}]
-    ->0Epilogue
-+ [<em>About</em>]
+// + [{0EpilogueTitle}]
+//    ->0Epilogue
++ [<em>About this Season</em>]
     ->AboutSeason0
 #clear
 -> DONE
 
 ==== 0Preface ====
 #audio: fx-valleys
-<em>Welcome weary adventurer! This story takes place in <em>Regio Scientiae: A Land of Understanding. Its a world of magic and steampunk, and a place for you to develop grit and explore curiosities. The quest narratives maybe done solo. However, they are best experienced the first time as playful interaction with the game master and neighboring, real life players.
+<em>
+- Welcome weary adventurer! This story takes place in Regio Scientiae: A Land of Understanding. Its a world of magic and steampunk. Its a place for you to develop grit and explore curiosities. These narratives can be read alone. However, they are best experienced the first time as a playful interaction with the game master and real life players.
+- There are numerous "Seasons" per course. Currently, there are Seasons planned for each unit of study. Each season is divided into Episodes; some are short, others are longer. You'll see a [<strong>Ω</strong>] when you reach the end of an episode. Clicking on it takes back to the main START MENU. You'll be given the choice of "NEXT EPISODE" to continue reading.
+</em>
     +[<strong>Ω</strong>]
         ->0StartMenu    
 ->DONE
@@ -92,23 +77,23 @@ You wake up in a cool, dry room. Inky blackness engulfs the senses. You get the 
 #audio: BlueMug
 <em>Previous night at the Blue Mug.</em> 
 A distraught woman comes in.
-She says loudly to the room, "I'm looking for brave adventurers! My husband has gone missing in the salt mine." 
-She starts to tear up. 
-"I don't have much money, but I need him back!"
-She pleads, "Please, someone help!"
-    +Everyone knew the perfect party of adventurers for the job [.]<>
-
-- , but that party wasn't in Canis Villa or even in the Calda Vale region right now. They were off on some grand adventure for the queen last someone heard. 
-No one really wants this sort of job including most of your party. It offers little in the way of reward and plenty in the form of danger.
-- From your party, {TheFighter} speaks up.
-    + <>{TheFighter}: "My lady, we shall locate your lost husband." #Fighter
+Distraught woman: pleads "Someone help please! "My husband has gone missing in the salt mine."
+Distraught woman: Starts to tear up. "I don't have much money, but I need him back!"
+    + Everyone knew the perfect party of adventurers for the job [.]<>
+-, but that party isn't in Canis Villa right now. Last people had heard, they are off on some grand adventure for the queen.
+- No one really wants this sort of job. It offers little in the way of reward and plenty in the form of danger.
+- {TheFighter} speaks up from your party.
+    + <>{TheFighter}: "We shall locate your lost husband my lady." #Fighter
     + <>{TheFighter}: "Why don't you ask the mining company?" #Fighter
-        -- She says, "I just came from the mining company. The bosses won't help."
+        -- She says, "I just came from the mining company. The mining bosses won't help."
 - {TheFighter} turns to the rest of you.
-    + "Helping a lady in distress is the proper thing to do! Right guys?"
-- Its going to be super awkward now to say no.
+    + "Helping a lady in distress is the right thing to do."
+- It'd be super awkward to say no now that {theFighter} has drawn her attention.
     + You: "Sure we can try to find him."
-- Your party reluctantly agrees.
+    + You: "I don't think this is our sort of thing."
+        -- {TheCleric}: Turns to you and says, "Surely we can help this nice young couple out?"
+            ++ You: "OK, fine"
+- Everyone else in the party reluctantly agrees.
 - "Thank you!" My name is {YoungMinerWife}. I pray you can find {YoungMiner}. {TheCleric} nods.
 - {YoungMinerWife} gives you directions to the mine.
 - The party decides to set out tomorrow morning.
@@ -123,20 +108,22 @@ No one really wants this sort of job including most of your party. It offers lit
 
 === 0Ep2 ===
 <h3>{0EpisodeTwo}</h3> #location: mine arrival
-The next day the party arrives at the mine without incident. There doesn't seem to be anyone around though. This strikes you as odd.
+The next day the party arrives at the mine without incident. There doesn't seem to be anyone around though which seems odd.
     + Make your way into the mine. #location: mine ambience
     + Look around outside.
-    -- Looks like a typical mine entrance. You enter the mine.
+    -- Seems like a typical mine entrance. You enter the mine.
 - Tools of the trade such as pick axes and hammers are scattered haphhazardly. It would appear the miners left in a hurry. 
-    + Then {theRogue} spots blood.
+    + \ {TheRogue} spots blood.
+    + \ {TheFighter} spots something shiny.
+        -- {TheFighter} inspects the shiny object which turns out to be a couple silver coins. He pocKets the extra coin.
 - {TheRogue} says, "There was a very nasty encounter in this tunnel. Judging by the amount of blood someone or something didn't fair very well."
-    + You take a closer look. <>
+    + You take a closer look at the blood. <>
         -- There is a lot of blood. 
             ++ [<em>WISDOM check pass</em>]
                 --- You notice very large bloody paw prints from a quadraped heading deeper into the mine. They could be from a wolf or bear.
                 Its probably time to move along.
              ++ [<em>WISDOM check fail</em>]
-                --- You don't notice anything unusual.
+                --- You don't notice anything unusual except for the quantity of blood spilled.
     + Probably best to keeping moving along.
 - How do you want to proceed down the tunnel?
     + You {MoveStealth} down the tunnel.
@@ -149,28 +136,29 @@ The next day the party arrives at the mine without incident. There doesn't seem 
         ->tunnel_run
     
 == tunnel_stealth
-->spiders
+    ->spiders
 == tunnel_walk
-->spiders
+    ->spiders
 == tunnel_hustle
-->spiders
+    ->spiders
 ==tunnel_run
-->spiders
+    ->spiders
 == spiders
-TODO: Look up Spider stats
-A few minor twists and turns later
-+ ... <>
--{~Two|Three} large menacing spiders at the edge of the torch light suddenly rush up the tunnel towards the party, chattering loudly. #spiders
-+ {tunnel_stealth} [You were being stealthy so you surprise the beasts. You get an extra attack and fight with advantage the first round!]
-    ->spiders_2A
-+ {tunnel_stealth} [You may attempt to flee undetected]
-    ->spiders_2A
-+ {tunnel_walk} [Fight!]
-    ->spiders_2A
-+ {tunnel_walk} [Flee!]
-    ->spiders_2A
-+ {tunnel_hustle or tunnel_run} [You are surprised by the beasts! They get the first attack and with advantage]
-    ->spiders_2A
+- A few minor twists and turns later
+    + ... <>
+-{~Two|Three} menacing giant spiders at the edge of the torch light suddenly rush up the tunnel towards the party, chattering loudly. #spiders
+    + {tunnel_stealth} [You were being stealthy so you surprise the beasts. You get an extra attack and fight with advantage the first round!]
+        ->spiders_2A
+    + {tunnel_stealth} [You may attempt to flee undetected]
+        ->spiders_2A
+    + {tunnel_walk} [Fight!]
+        ->spiders_2A
+    + {tunnel_walk} [Flee!]
+        ->spiders_2A
+    + {tunnel_hustle or tunnel_run} [You are surprised by the beasts! They get the first attack and with advantage]
+        ->spiders_2A
+
+-> DONE
 = spiders_2A
 // To flee now would be unwise (<em>the spiders get bonus attacks if you insist</em>). 
 The party prepares for combat!
@@ -180,18 +168,18 @@ The party prepares for combat!
     ++ <em>[Back to the action]</em>
     + <em>[Continue the narrative]</em>
     
-- {TheFighter} hacks and slashes at the legs of one spider. {TheRogue} stabs at the multiple eyes on another spider and effectively blinds it. #audio: magic missle #audio:fleshy stab
+- {TheFighter} hacks and slashes at the legs of one giant spider. {TheRogue} stabs at the multiple eyes on another giant spider and effectively blinds it. # magic-missle.mp3 #fleshy-stab.mp3
     + Flee. <>
         -- <em>Really? You want to run away from spiders?</em>
         ++ Continue to fight.
-    + Continue to fight.
-        -- With a volley of magic missiles {theWizard} finishes them off. 
-            ++ Victory! <>
-- The party defeats the spiders. 
+    + Continue to fight. <>
+        -- \ {TheWizard} finishes them off with a volley of magic missiles! 
+            ++ Victory <> # win.mp3
+- The party defeats the giant spiders. 
     + "Let's see if there is anything to loot," {theRogue} says.
-    + "Don't bother looting spiders," {theCleric} says.
+    + "Don't bother looting the spiders," {theCleric} says.
         -- "No harm in looking," {theRogue} says.
-        ++ You take take a quick look.
+        ++ You take a quick look.
 - One of the spiders has two lose fangs dripping with venom; courtesy of a shield punch from {theFighter}.
     + Carefully, {theWizard} holds a vial up to the fangs and collects some of the dripping venom.
     
@@ -203,9 +191,9 @@ The party prepares for combat!
 Not much longer you find two bodies, presumably miners. A third that stirs ever so slightly when hearing you approach. 
 TODO: Healing spell stats
 <em>What to do...</em>
-    + "Perhaps I should perform a minor healing spell?" asks {theCleric}.
+    + "Perhaps I should perform a minor healing spell (1d8)?" asks {theCleric}.
         -- You say "I was thinking the same thing." {TheCleric} performs a <em><Minor Healing</em>.
-    + "I'll give him a Potion of Minor Healing" you say.
+    + "I'll give him a <em>potion of healing</em> (2d4 + 2)" you say.
         -- You take the potion out of your pack and have him drink it.
     + "He seems more dead than alive. Let's leave him." {TheRogue} says.
         -- "You can't be serious?!" {TheCleric} asks. He performs a minor healing spell.
@@ -345,6 +333,7 @@ A small spark whooshes the torch into life. You at a tunnel dead end. The tunnel
 TODO: Write Episode 4 
 <h3>{0EpisodeFour}</h3>
 You enter the tunnel. After walking for a minute you notice the tunnel starts to become a mixture of rock with veins of salt. Another minute of walking and you come to a crossroads. By now the salt has been reduced to veins a few inches thick.
+... not done yet
 // =2
 // You start walking through the tunnel. 
 // * Rush out of the room ->Ep2_END
@@ -360,6 +349,7 @@ You enter the tunnel. After walking for a minute you notice the tunnel starts to
 == 0Ep5 ==
 TODO: Write Episode 5
 <h3>{0EpisodeFive}</h3>
+...not done yet
 +[NEXT EPISODE]
     ->0Epilogue
 +[<strong>Ω</strong>]
@@ -371,12 +361,67 @@ TODO: Write Episode 5
 ->END
 
 === AboutSeason0 ===
-The season, {Season0Title}, introduces students to a Choose Your Own Adventure (CYOA) narrative format. We use the narrative to also play a RPG version similar to D&D in our classroom. 
-<h4>Purpose</h4>
-to keep INKY from getting confused between each season "S" and episode "Ep"
+SEASON: 0."{Season0Title}" is a actually a prologue to our a class narrative "Time Tombs."
+PURPOSE:
+\* Introduce students to a "Choose Your Own Adventure" (CYOA) narratives
+\* Introduce students to role-plaging games (RPG)
+\* Teach students how combat works in a RPG
+\* Develop students' social skills
+\* Develop habots of mind; persistence, growth mindset
+\* Build rapport and a sense of community in the classroom
+\* Add some different, something fun to students' day
+HABITS OF MIND: persistence, growth mindset
 COURSE: Biology
 FIRST DRAFT: Summer 2019
-+[START MENU]
+CURRENT DRAFT: 2019 July 10
+
+MONSTERS:
+{GiantSpider}
+{GiantSpiderAction1}
+{GiantSpiderAction2}
+
+// {CaveBear}
+// {CaveBearAction1}
+
++[<strong>Ω</strong>]
     ->0StartMenu
     
 ->DONE
+
+
+// INVENTORY VARIABLES
+VAR food =          "no food"
+VAR weapons =       "no weapons"
+VAR armor =         "no armor"
+VAR items =         "flint and steel"
+
+// DICE ROLLS
+VAR d4 =    "1d4"
+VAR d6 =    "1d6"
+VAR d8 =    "1d8"
+VAR d10 =   "1d10"
+VAR d12 =   "1d12"
+VAR d20 =   "1d20"
+VAR d100 =  "1d100"
+
+// MOVEMENT
+TODO: add a STEALTH roll option
+VAR MoveStealth = "move along trying be undetected"
+VAR MoveWalk = "walk"
+VAR MoveHustle = "move briskly"
+VAR MoveRun = "run"
+CONST InitiativeExplained = "Everyone in combat or near combat, rolls a d20 to determine the order of each player's actions. For example, if PLAYER ONE rolls a 5 and PLAYER TWO rolls a 15, then PLAYER TWO performs his or her action before PLAYER TWO. Monsters also roll initiative."
+
+// NPCS
+VAR Bartender =         "Shamis"
+VAR ServingMaid =       "Jane"
+VAR YoungMiner =        "James"
+VAR YoungMinerWife =    "Susan"
+
+// MONSTERS
+VAR GiantSpider = "<b>GIANT SPIDER</b>  AC:14 HP: 26" 
+VAR GiantSpiderAction1 = "<b>Spider Bite</b> +5 to hit, 7 piercing damage, target must make a Constitution saving throw, taking 9 poison damage on a failed save (4 damage on a successful one)"
+    // DC 11
+VAR GiantSpiderAction2 = "<b>Web</b> +5 to hit, range 30/60 ft. The target is restrained by webbing. As an action, the restrained target can make a  Strength check bursting the webbing on a success. The webbing can also be attacked and destroyed"
+    // DC 12
+    // Webbing AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage.
