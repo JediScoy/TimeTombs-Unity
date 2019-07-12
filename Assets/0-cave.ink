@@ -1,16 +1,16 @@
-# title: The Darkness of Time
+# title: The Cave
 # author: Master Scoy
 
 INCLUDE TimeTombsGlobalVariables.ink
 
 // STORY OUTLINE
-CONST Season0 =    "The Darkness of Time"
-CONST S0Prologue =  "IN THE DARK"
-CONST S0EpisodeOne =     "THE BLUE MUG"
-CONST S0EpisodeTwo =     "THE MINE"
-CONST S0EpisodeThree =   "THE ROOM"
-CONST S0EpisodeFour =    "THE TUNNEL"
-CONST S0EpisodeFive =    "TIME"
+CONST Season0 =         "The Cave"
+CONST S0Prologue =      "IN THE DARK"
+CONST S0EpisodeOne =    "THE BLUE MUG"
+CONST S0EpisodeTwo =    "THE MINE"
+CONST S0EpisodeThree =  "THE ROOM"
+CONST S0EpisodeFour =   "THE TUNNEL"
+CONST S0EpisodeFive =   "TIME"
 CONST S0Epilogue =  "Epilogue"
 
 ->S0StartMenu
