@@ -36,8 +36,10 @@ Start Menu
 
 ==== S0Preface ====
 #audio: fx-valleys
-- Welcome weary adventurer! This story takes place in Regio Scientiae: A Land of Understanding. Its a world of magic and steampunk. Its a place for you to develop grit and explore curiosities. These narratives can be read alone. However, they are best experienced the first time as a playful interaction with the game master and real life players.
-- There are numerous "Seasons" per course. Currently, there are Seasons planned for each unit of study. Each season is divided into Episodes; some are short, others are longer. You'll see a [<strong>Ω</strong>] when you reach the end of an episode. Clicking on it takes back to the main START MENU. You'll be given the choice of "NEXT EPISODE" to continue reading.
+- SETTING
+- {Setting}
+- PURPOSE
+- {CYOAPurpose}
     +[Ω]
         ->S0StartMenu
     +[NEXT EPISODE]
