@@ -8,22 +8,31 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Plugins/Ink/Orgins0/origins-0.unity
+  - enabled: 1
+    path: Assets/Scenes/0-MENU.unity
+    guid: a7b6bf1651a32d346b7bed41f2759de3
+  - enabled: 1
+    path: Assets/Scenes/0-time-tombs.unity
     guid: 8af1c5cbac5094782904447c9410b35d
   - enabled: 0
-    path: Assets/Plugins/Ink/Orgins1/origins-1.unity
+    path: Assets/Scenes/1-time-tombs.unity
     guid: 34f35448847e49941a3b52eee7feb74b
   - enabled: 0
-    path: Assets/Plugins/Ink/Orgins2/origins-2.unity
+    path: Assets/Scenes/2-time-tombs.unity
     guid: 35ce643b68d2e58448985b07ead37955
   - enabled: 0
-    path: Assets/Plugins/Ink/Orgins3/origins-3.unity
+    path: Assets/Scenes/origins-arrakis.unity
+    guid: c60c3148c7b041743a491afe16559964
+  - enabled: 0
+    path: Assets/Scenes/3-time-tombs.unity
     guid: 58875b81e2232ba4e9127632222567ff
   - enabled: 0
-    path: Assets/Plugins/Ink/Orgins4/origins-4.unity
+    path: Assets/Scenes/4-time-tombs.unity
     guid: 30fb6f965847fac4abec2e2c9e9e14fb
   - enabled: 0
-    path: Assets/Plugins/Ink/Orgins5/origins-5.unity
+    path: Assets/Scenes/5-time-tombs.unity
     guid: 8f0f72255793b6d4da982da6403a1384
+  - enabled: 0
+    path: Assets/Scenes/6-time-tombs.unity
+    guid: 6ec2a774213c1d84ab532af1f244cbfb
   m_configObjects: {}
